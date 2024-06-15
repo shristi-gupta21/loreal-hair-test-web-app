@@ -1,25 +1,16 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import Frame from "./components/Frame";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div
+      className="bg-cover relative absolute h-screen flex items-center justify-center"
+      style={{ backgroundImage: "url('/images/bg.jpg')" }}
+    >
+      <Frame />
+      <div className=" absolute right-0 top-0 h-screen">
+        <img src="/images/right-img.png" alt="" className=" h-full" />
+      </div>
     </div>
   );
 }
-
 export default App;
