@@ -42,35 +42,59 @@ const Frame = () => {
 
   return (
     <div className="relative flex flex-col justify-center items-center">
-      <img src="../images/frame.png" className="z-30 h-[43rem]" alt="frame" />
-      <div className="absolute h-4/5 top-1 w-[calc(100%-2rem)] z-20">
-        <video ref={videoRef} autoPlay playsInline />
+      <div className="text-white flex text-xl items-end justify-end w-full gap-0.5 mr-4 pb-4 font-medium">
+        <img src="../images/home.png" className="" alt="home" />
+        <span>Home</span>
       </div>
-      <div className="absolute w-full z-0 -left-[70%] flex flex-col gap-16">
-        <div>
+      <div className="z-20 relative">
+        <img src="../images/frame.png" className="z-30 h-[43rem]" alt="frame" />
+        <div className="absolute h-4/5 top-1 w-[calc(100%-2rem)] z-20">
+          <video ref={videoRef} autoPlay playsInline />
+        </div>
+      </div>
+      <div className="absolute w-full z-0 -left-[70%] flex flex-col gap-8">
+        <div className=" relative">
           <button
             onClick={startCamera}
-            className="text-pink-500 w-fit text-4xl bg-white font-bold py-2 px-4 rounded-tl-xl rounded-br-xl "
+            className="text-pink-500 w-fit text-4xl bg-white font-bold py-2 px-4 rounded-tl-3xl rounded-br-3xl "
           >
             CAPTURE
           </button>
+          <div className=" absolute bottom-0.5 bg-white w-[73%] h-1 "></div>
         </div>
-        <div>
+        <div className=" relative">
           <button
             onClick={retakeVideo}
-            className="text-pink-500 w-fit text-4xl bg-white font-bold py-2 px-4 rounded-tl-xl rounded-br-xl "
+            className="text-pink-500 w-fit text-4xl bg-white font-bold py-2 px-4 rounded-tl-3xl rounded-br-3xl "
           >
             RETAKE
           </button>
+          <div className=" absolute bottom-0.5 bg-white w-[73%]  h-1 "></div>
         </div>
-        <div>
+        <div className=" relative">
+          <button
+            type="button"
+            className="text-pink-500 w-fit text-4xl bg-white font-bold py-2 px-4 rounded-tl-3xl rounded-br-3xl "
+          >
+            POST
+          </button>
+          <div className=" absolute bottom-0.5 bg-white w-[73%]  h-1 "></div>
+        </div>
+        <div className=" relative">
           <button
             onClick={saveImage}
-            className="text-pink-500 w-fit text-4xl bg-white font-bold py-2 px-4 rounded-tl-xl rounded-br-xl "
+            className="text-pink-500 w-fit text-4xl bg-white font-bold py-2 px-4 rounded-tl-3xl rounded-br-3xl "
           >
             SAVE
           </button>
+          <div className=" absolute bottom-0.5 bg-white w-[73%]  h-1 "></div>
         </div>
+      </div>
+      <div className="absolute w-full z-0 -right-[98%] flex flex-col gap-[5.5rem] top-[34%]">
+        <div className="  bg-white w-[60%] h-1 "></div>
+        <div className=" bg-white w-[73%]  h-1 "></div>
+        <div className="  bg-white w-[73%]  h-1 "></div>
+        <div className=" bg-white w-[73%]  h-1 "></div>
       </div>
     </div>
   );
